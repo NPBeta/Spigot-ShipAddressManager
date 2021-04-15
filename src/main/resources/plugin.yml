@@ -1,0 +1,8 @@
+name: ShipAddressManager
+version: ${project.version}
+main: org.npbeta.shipaddressmanager.SpigotShipAddressManager
+api-version: 1.15
+prefix: "[ SAM ]"
+authors: [ WonderBeta ]
+description: A simple plugin that gives players a way to enter their ship address in game when they win a Physical gift, and saves them to MySQL database.
+website: https://www.npbeta.com
