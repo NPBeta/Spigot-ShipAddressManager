@@ -1,0 +1,10 @@
+Plugin:
+  Loading:
+    - '&b[SAM] &2欢迎使用 ShipAddressManager!'
+    - '&b[SAM] &2正在加载配置并注册命令和监听器...'
+  Loaded: '&b[SAM] &2加载完成.'
+  nonPlayer: '&b[SAM] &2仅有玩家才能执行此命令.'
+  noPermission: '&b[SAM] &2你无权执行此命令.'
+  Reloaded: '&b[SAM] &2已重新加载配置文件和语言文件.'
+  Unload: '&b[SAM] &2感谢您使用 ShipAddressManager!'
+  unknownCommand: '&b[SAM] &2未知命令.'

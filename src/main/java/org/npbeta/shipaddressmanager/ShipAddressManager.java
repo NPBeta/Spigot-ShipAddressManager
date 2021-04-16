@@ -1,45 +1,28 @@
 package org.npbeta.shipaddressmanager;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import io.izzel.taboolib.loader.Plugin;
+import io.izzel.taboolib.module.locale.TLocale;
+import org.bukkit.Bukkit;
+import org.npbeta.shipaddressmanager.Commands.CommandHandler;
+import org.npbeta.shipaddressmanager.Configs.Config;
 import org.npbeta.shipaddressmanager.Listeners.ChatListener;
 import org.npbeta.shipaddressmanager.Listeners.InventoryClickListener;
 
 import java.util.Objects;
 
-public final class ShipAddressManager extends JavaPlugin {
-
-    private String address;
-    private int port;
-    private String database;
-    private String username;
-    private String password;
+public final class ShipAddressManager extends Plugin {
 
     @Override
     public void onEnable() {
-        this.getLogger().info("Welcome to ShipAddressManager!");// Plugin startup logic
-
-        getLogger().info("Registering Listener...");
-        getServer().getPluginManager().registerEvents(new ChatListener(), this);
-        getServer().getPluginManager().registerEvents(new InventoryClickListener(), this);
-        getLogger().info("Registering Commands...");
-        Objects.requireNonNull(getCommand("sam")).setExecutor(new CommandHandler());
-        getLogger().info("Reading Config...");
-        loadConfig();
-        getLogger().info("Initialize Complete.");
-        getLogger().info("Read from config.yml:" + address + port + database + username + password);
+        TLocale.sendToConsole("Plugin.Loading");
+        getPlugin().getServer().getPluginManager().registerEvents(new ChatListener(), getPlugin());
+        getPlugin().getServer().getPluginManager().registerEvents(new InventoryClickListener(), getPlugin());
+        Objects.requireNonNull(getPlugin().getCommand("sam")).setExecutor(new CommandHandler());
+        TLocale.sendToConsole("Plugin.Loaded");
     }
 
     @Override
     public void onDisable() {
-        this.getLogger().info("Thanks For Using ShipAddressManager!");// Plugin shutdown logic
-    }
-
-    void loadConfig() {
-        this.saveDefaultConfig();
-        this.address = this.getConfig().getString("mysql.address");
-        this.port = this.getConfig().getInt("mysql.port");
-        this.database = this.getConfig().getString("mysql.database");
-        this.username = this.getConfig().getString("mysql.username");
-        this.password = this.getConfig().getString("mysql.password");
+        TLocale.sendToConsole("Plugin.Unload");
     }
 }

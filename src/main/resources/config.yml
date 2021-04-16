@@ -1,3 +1,4 @@
+LANG: zh_CN
 mysql:
   address:
   port:
