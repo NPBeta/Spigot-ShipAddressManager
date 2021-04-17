@@ -11,12 +11,12 @@ lib-download: true
 lib-version: ${libVersion}
 loader-version: ${loaderVersion}
 
-commands:
-  sam:
-    description: SAM Plugin Main Command.
-
-permissions:
-  sam.admin:
-    default: op
-  sam.use:
-    default: true
+#commands:
+#  sam:
+#    description: SAM Plugin Main Command.
+#
+#permissions:
+#  sam.admin:
+#    default: op
+#  sam.use:
+#    default: true
