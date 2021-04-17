@@ -6,11 +6,12 @@ A simple plugin that gives players a way to enter their ship address in game whe
 ## WIP
 - [ ] An Item Token to check if players actually win the gift
 - [ ] A Website for administrators to get the addresses
-- [ ] I18N
+- [x] I18N
+- [ ] Multi Version Support
 - [ ] ...
 
 ## Requirements
-- Spigot-1.15.2 or higher
+- Spigot-1.15.2
 - A MySQL Database
 
 ## License
